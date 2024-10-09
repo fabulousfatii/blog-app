@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import HeaderCard from './components/headerCard';
+import HeaderCard from './components/HeaderCard';
 import Createcard from './components/Createcard';
 import BlogCard from './components/BlogCard';
 import Usehook from './hook/Usehook';
