@@ -2,7 +2,7 @@ import React from 'react'
 import { getAuth } from 'firebase/auth';
 import Usehook from '../hook/Usehook';
 import BlogCard from '../components/BlogCard';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../firebase/config';
 import {toast} from "react-toastify"
@@ -13,6 +13,8 @@ function Profile() {
     const auth = getAuth();
     console.log(auth.currentUser);
     const user = auth.currentUser
+
+    const navigate =useNavigate()
 
     const deleteblog = async(id)=>{
         try {
@@ -27,8 +29,8 @@ function Profile() {
     return (
         
         <div 
-        // className="w-full h-screen bg flex justify-center items-center md:w-full md:min-h-fit lg:w-full xl:w-screen 2xl:w-full"
         className=' w-full max-lg:h-[1100px] max-md:h-full max-sm:h-full bg py-10 sm:min-w-[40rem] md:min-w-[48px]  flex flex-col  '>
+            {user? null : navigate("/login") }
             <h1 className='w-full bg-teal-100 text-teal-950 text-2xl text-center font-bold p-3 '>My Profile</h1>
             <div className='p-20'>
                      

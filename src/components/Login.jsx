@@ -21,7 +21,7 @@ const [error,seterror]=useState(false)
         try {
             await signInWithEmailAndPassword(auth, email, password)
             toast.success("successfully user login")
-            window.location.href = "/createblog"
+            window.location.href = "/profile"
             // navigate("/createblog")
             console.log("done");
             setuserloggedin(true)

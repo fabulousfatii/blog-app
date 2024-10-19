@@ -16,29 +16,9 @@ function BlogDetails() {
  // console.log(title);
 
 
-// const likebutton= async(id)=>{
-//   setlike((prev)=>!prev)
-//   console.log("like",like);
+ console.log("like",like);
 
-//  if (like==true) {
-//   const washingtonRef = doc(db,'users',id);
 
-//   // Set the "capital" field of the city 'DC'
-//   await updateDoc(washingtonRef, {
-//     like: count+1
-//   });
-//  }
- 
-//   if(like==false){
-//     const cityRef = doc(db, 'users',id);
-//   // Remove the 'capital' field from the document
-//     await updateDoc(cityRef, {
-//     like: count-1
-// });
-//   console.log("user has unliked");
-  
-//   }
-// }
 
 
   return (
@@ -58,9 +38,10 @@ function BlogDetails() {
           />
           {/* <svg className='mx-4' height="30px" width="30px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-4 -4 58.00 58.00" xml:space="preserve" fill="#181616" stroke="#181616" stroke-width="1.6"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill={doc.like?"#c41e08":"#f2eeed"} d="M24.85,10.126c2.018-4.783,6.628-8.125,11.99-8.125c7.223,0,12.425,6.179,13.079,13.543 c0,0,0.353,1.828-0.424,5.119c-1.058,4.482-3.545,8.464-6.898,11.503L24.85,48L7.402,32.165c-3.353-3.038-5.84-7.021-6.898-11.503 c-0.777-3.291-0.424-5.119-0.424-5.119C0.734,8.179,5.936,2,13.159,2C18.522,2,22.832,5.343,24.85,10.126z"></path> </g></svg> */}
           <h1 className="mx-4  font-semibold text-black text-3xl ">{doc.title}</h1>
-            <p className="mt-3 mx-4 text-lg text-black">
-              {doc.body}
-            </p>
+            <div className="mt-3 mx-4 text-lg text-black"  dangerouslySetInnerHTML={{__html: doc.body}} >
+           
+           {/* {doc.body} */}
+            </div>
           
             
             {/* <button onClick={()=>likebutton(doc.id)}
@@ -76,7 +57,3 @@ function BlogDetails() {
 }
 
 export default BlogDetails
-
-{/* <h1 className='text-3xl'>{doc.title}</h1>
-            <p className='text-lg'>{doc.body}</p>
-            <button onClick={()=>likebutton(doc.id)}>like</button> */}
