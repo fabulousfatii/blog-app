@@ -9,11 +9,11 @@ function BlogCard({blog}) {
   <img
     src={`${blog?.image}`}
     alt="Laptop"
-    className="h-[200px] max-sm:h-full w-full rounded-md object-cover p-2"
+    className="md:h-[200px]  w-full rounded-md object-cover p-2"
   />
-  <div className="p-4 overflow-y-hidden">
+  <div className="p-4 ">
     <h1 className="text-lg font-semibold text-black">{blog.title}</h1>
-    <p className="mt-3 text-sm text-black max-sm:hidden">
+    <p className="mt-3 text-sm text-black ">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
       debitis?
     </p>
