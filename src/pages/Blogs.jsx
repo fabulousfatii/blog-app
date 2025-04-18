@@ -15,7 +15,7 @@ function Blogs() {
            <div>
            <h1 className='text-5xl font-semibold text-white px-14 py-4 pt-9 m-6'>Updates, Lifestyle, Technology and more</h1>
            
-           <div className='flex flex-wrap gap-3 box' >
+           <div className='flex flex-wrap gap-4 box' >
             
               {bloglist.map((blog,index)=>
                <div key={index} className='bg-[#cbebdf] rounded-lg'>
@@ -23,7 +23,7 @@ function Blogs() {
                   <BlogCard key={index} blog={blog} />
   
                   <Link to={`/blogs/${blog.title}`} >
-                  <button type="button" className="mx-4 my-2 rounded-lg bg-teal-950 px-5 py-1 text-lg font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"> Read</button>
+                  <button type="button" className="mx-4 mb-2 rounded-lg bg-teal-950 px-5 py-1 text-lg font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"> Read</button>
                   </Link>
                </div>
 

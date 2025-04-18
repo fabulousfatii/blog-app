@@ -37,19 +37,19 @@ function Signup() {
     return (
        
  <div className="bg-teal-700 flex items-center justify-center min-h-screen">
-            <div className="bg-gray-100 p-6 rounded-lg shadow-lg w-full max-w-md">
+            <div className="bg-teal-800 text-white 00 p-6 rounded-lg shadow-lg w-full max-w-md">
                 <h2 className="text-2xl font-semibold text-center mb-6">Sign Up</h2>
                 <form onSubmit={(e) => submithandler(e)}>
                     {/* <!-- Email Field --> */}
                     <div className="mb-4">
-                        <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                        <label className="block text-sm font-medium  mb-2">Email</label>
                         <input type="email" id="email" name="email" required
                             className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                             onChange={(e) => setEmail(e.target.value)} />
                     </div>
 
                     <div className="mb-4">
-                        <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                        <label className="block text-sm font-medium  mb-2">Name</label>
                         <input type="text" name="text" required
                             className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                             onChange={(e) => setName(e.target.value)} />
@@ -57,7 +57,7 @@ function Signup() {
 
                     {/* <!-- Password Field --> */}
                     <div className="mb-4">
-                        <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
+                        <label className="block text-sm font-medium  mb-2">Password</label>
                         <input type="password" id="password" name="password" required
                             className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                             onChange={(e) => setPassword(e.target.value)} />
@@ -70,7 +70,7 @@ function Signup() {
                 </form>
 
 
-                <p className="text-center mt-4 text-sm text-gray-600">Already have an account? <a onClick={()=>navigate("/login")} className="text-blue-500 hover:underline">Log in</a></p>
+                <p className="text-center mt-4 text-sm text-gray-200">Already have an account? <a onClick={()=>navigate("/login")} className="text-blue-500 hover:underline">Log in</a></p>
             </div>
         </div>
  

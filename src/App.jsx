@@ -18,8 +18,8 @@ console.log(bloglist);
 useGSAP(()=>{
   gsap.to(".box",{
     transform:"translateX(-100%)",
-            duration:5,
-            delay:3,
+            duration:9,
+            delay:2,
             repeat:-1,
             ease:"none",
             color:"white",

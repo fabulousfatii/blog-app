@@ -1,11 +1,12 @@
 import React from 'react';
+import EndingPage from '../components/EndingPage';
 
 const About = () => {
   const styles = {
     container: {
-      backgroundColor: '#008080', // Teal background
+     // backgroundColor: '#008080', // Teal background
       color: '#ffffff', // White text
-      padding: '50px',
+     // padding: '50px',
       textAlign: 'center',
       minHeight: '100vh',
     },
@@ -23,6 +24,7 @@ const About = () => {
 
   return (
     <div style={styles.container}>
+      <div className='p-10 pt-20 bg-teal-900 '>
       <h1 style={styles.heading}>About Us</h1>
       <p style={styles.paragraph}>
         Welcome to our blog! We're passionate writers dedicated to sharing
@@ -34,6 +36,8 @@ const About = () => {
         Our mission is to create a community of like-minded individuals who enjoy learning 
         and sharing knowledge. Thank you for being a part of our journey!
       </p>
+      </div>
+      <EndingPage/>
     </div>
   );
 };
